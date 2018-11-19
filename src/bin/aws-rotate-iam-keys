@@ -5,7 +5,7 @@
 set -eu -o errexit -o pipefail -o noclobber -o nounset
 IFS=$'\n\t'
 
-! getopt --test > /dev/null
+! /usr/local/opt/gnu-getopt/bin/getopt --test > /dev/null
 if [[ ${PIPESTATUS[0]} -ne 4 ]]; then
     echo "I’m sorry, `getopt --test` failed in this environment."
     exit 1
