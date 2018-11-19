@@ -1,5 +1,5 @@
 # aws-rotate-iam-keys
-Rotate your IAM Keys to be in compliance with security best practices. AWS talks about rotating your keys every 30, 45, or 90 days. But who has the time to make their own script and remember to do that? I did. And security is easier when its less than 3 lines that you need to copy + paste to be secure. Now it's easy to rotate your IAM credentials nightly and wake up with more security than the day before.
+Rotate your IAM Keys to be in compliance with security best practices with this script. 
 
 ## Installation
 AWS Rotate IAM Keys is supported on MacOS
