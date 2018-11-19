@@ -15,7 +15,7 @@ sudo apt-get install aws-rotate-iam-keys
 ### MacOS
 
 ```
-brew tap SMARTeacher/aws-rotate-iam-keys
+brew tap SMARTeacher/aws-rotate-iam-keys https://github.com/SMARTeacher/aws-rotate-iam-keys
 brew install aws-rotate-iam-keys
 ```
 Requires [Homebrew](https://brew.sh/) to install. I am hoping to be included in Homebrew Core soon!
