@@ -2,15 +2,8 @@
 Rotate your IAM Keys to be in compliance with security best practices. AWS talks about rotating your keys every 30, 45, or 90 days. But who has the time to make their own script and remember to do that? I did. And security is easier when its less than 3 lines that you need to copy + paste to be secure. Now it's easy to rotate your IAM credentials nightly and wake up with more security than the day before.
 
 ## Installation
-AWS Rotate IAM Keys is supported by all major platforms.
+AWS Rotate IAM Keys is supported on MacOS
 
-### Ubuntu
-
-```
-sudo add-apt-repository ppa:rhyeal/aws-rotate-iam-keys
-sudo apt-get update
-sudo apt-get install aws-rotate-iam-keys
-```
 
 ### MacOS
 
@@ -22,20 +15,6 @@ Requires [Homebrew](https://brew.sh/) to install. I am hoping to be included in 
 
 ***IMPORTANT:*** You must install your own cron job for automated key rotation. [Instructions here](https://github.com/rhyeal/aws-rotate-iam-keys#macos-1) or scroll down to `Additional Cron Instructions` below.
 
-### Other Linux
-
-```
-wget -q https://github.com/rhyeal/aws-rotate-iam-keys/blob/master/aws-rotate-iam-keys_0.8.1.deb -o aws-rotate-iam-keys.deb
-sudo dpkg -i aws-rotate-iam-keys.deb
-sudo apt-get install -f
-rm aws-rotate-iam-keys.deb # optional file clean up
-```
-
-### Windows
-
-[Click here](https://aws-rotate-iam-keys.com/aws-rotate-iam-keys.ps1) to download the executable PowerShell script.
-
-Simply place this in any directory and then run it. It will install the Scheduled Task to rotate your keys nightly upon first run and will rotate your keys on each run thereafter.
 
 ## Features
 
@@ -165,25 +144,7 @@ launchctl start com.aws.rotate.iam.keys
 
 That's it. Now your keys will be rotated every day for you.
 
-### Windows
-
-AWS Rotate IAM Keys is set up to automatically schedule a task for you upon first run. If you want to edit the profiles that are being updated, you need to modify the task using [Task Scheduler](https://docs.microsoft.com/en-us/windows/desktop/taskschd/task-scheduler-start-page). Look for a task named "AWS Rotate IAM Keys" and modify the `-profile` parameter from `default` to a comma-separated list of your profile names.
-
-If you move the .ps1 script from the initial location where you first ran it, you will need to modify the path in the task to point to the correct script location.
-
-## On the Web!
-Visit us on the web at [aws-rotate-iam-keys.com](https://aws-rotate-iam-keys.com) for full installation instructions
-in a snazzy single-page UI. It's basically this README with some colors.
-
-## Checksums
-
-### Linux
-```
-echo 863411bf7cc2d4de7c67abecd2b14658 aws-rotate-iam-keys.0.8.1.deb | md5sum --check -
-```
 ### MacOS
 
 Homebrew gets the release zip of the entire repo: `SHA256 bff7a999f402db12114fae91d46455e5f36b9559fd4a07caad09c5f42a99b8d6`
 
-### Windows
-PowerShell script file: `MD5 7b78cc773ac69f55dba4caca4de6b437  Windows/aws-rotate-iam-keys.ps1`
