@@ -7,7 +7,7 @@ IFS=$'\n\t'
 
 ! /usr/local/opt/gnu-getopt/bin/getopt --test > /dev/null
 if [[ ${PIPESTATUS[0]} -ne 4 ]]; then
-    echo "I’m sorry, `getopt --test` failed in this environment."
+    echo "I’m sorry, `/usr/local/opt/gnu-getopt/bin/getopt --test` failed in this environment."
     exit 1
 fi
 
@@ -15,7 +15,7 @@ fi
 # -temporarily store output to be able to check for errors
 # -activate quoting/enhanced mode (e.g. by writing out “--options”)
 # -pass arguments only via   -- "$@"   to separate them correctly
-! PARSED=$(getopt --options=hvp: --longoptions=profile:,profiles:,version,help --name "$0" -- "$@")
+! PARSED=$(/usr/local/opt/gnu-getopt/bin/getopt --options=hvp: --longoptions=profile:,profiles:,version,help --name "$0" -- "$@")
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then
     # e.g. return value is 1
     #  then getopt has complained about wrong arguments to stdout
