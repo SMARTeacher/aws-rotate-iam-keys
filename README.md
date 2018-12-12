@@ -1,5 +1,6 @@
 # aws-rotate-iam-keys
 Rotate your IAM Keys to be in compliance with security best practices with this script. 
+A copy of this is also on the ServiceDesk knowlege base: [Link}(https://prodigygame.atlassian.net/wiki/spaces/DSD/pages/628097181/How+to+rotate+your+AWS+Credentials_
 
 ## Installation
 AWS Rotate IAM Keys is supported on MacOS
